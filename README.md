@@ -1,6 +1,6 @@
-Web page: https://ucsb-cs56-f19.github.io/lab07-danielkluzner/
-Javadoc: https://ucsb-cs56-f19.github.io/lab07-danielkluzner/apidocs
-Jacoco: https://ucsb-cs56-f19.github.io/lab07-danielkluzner/jacoco
+* Web page: https://ucsb-cs56-f19.github.io/lab07-danielkluzner/
+* Javadoc: https://ucsb-cs56-f19.github.io/lab07-danielkluzner/apidocs
+* Jacoco: https://ucsb-cs56-f19.github.io/lab07-danielkluzner/jacoco
 
 A simple Spring Boot webapp using:
 * Thymeleaf templating
