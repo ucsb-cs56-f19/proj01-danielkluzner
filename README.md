@@ -1,7 +1,8 @@
 * Web page: https://ucsb-cs56-f19.github.io/lab07-danielkluzner/ 
 * Javadoc: https://ucsb-cs56-f19.github.io/lab07-danielkluzner/apidocs 
 * Jacoco: https://ucsb-cs56-f19.github.io/lab07-danielkluzner/jacoco 
-* Heorku: https://cs56-f19-lab07-danielkluzner.herokuapp.com/ 
+* Heorku: https://cs56-f19-lab07-danielkluzner.herokuapp.com/
+* Travis CI: https://travis-ci.org/ucsb-cs56-f19/lab07-danielkluzner
 
 A simple Spring Boot webapp using:
 * Thymeleaf templating
