@@ -79,7 +79,14 @@ public class HomePageTest {
 	mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk())
                 .andExpect(xpath("//*[@id=\"navbarTogglerDemo03\"]/ul[1]/li[3]/a").exists())
-                .andExpect(xpath("//*[@id=\"navbarTogglerDemo03\"]/ul[1]/li[3]/a").string("Users"));
+                .andExpect(xpath("//*[@id=\"navbarTogglerDemo03\"]/ul[1]/li[3]/a").string("Location Search"));
     }
-    
+
+    @Test
+    public void getHomePage_correctlyShowsLocationsTitle() throws Exception {
+	mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
+                .andExpect(status().isOk())
+                .andExpect(xpath("//*[@id=\"navbarTogglerDemo03\"]/ul[1]/li[4]/a").exists())
+                .andExpect(xpath("//*[@id=\"navbarTogglerDemo03\"]/ul[1]/li[4]/a").string("Users"));
+    }
 }
