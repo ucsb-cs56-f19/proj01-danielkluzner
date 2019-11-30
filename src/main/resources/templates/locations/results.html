@@ -29,27 +29,27 @@
           </tbody>
         </table>
 
-	<h2>JSON Results</h2>                                                                                                            
-                                                                                                                                             
-        <pre th:text="${json}">This is placeholder</pre>
-
-	<!--<h3>Earthquakes</h3>
+	<h3>Location Search Results</h3>
         <table class = "table">
           <thead>
             <tr>
-              <th>id</th>
-              <th>place</th>
-              <th>mag</th>
+              <th>Place ID</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+	      <th>Display Name</th>
+	      <th>Type</th>
             </tr>
           </thead>
           <tbody>
-            <tr th:each="f: ${featureCollection.features}"> 
-              <td><a th:href="${featureCollection.metadata.url}" th:text="${f.id}"></a></td>
-              <td th:text="${f.properties.place}"></td>
-              <td th:text="${f.properties.mag}"></td>
+            <tr th:each="p: ${places}">
+	      <td th:text="${p.place_id}"></td>
+	      <td th:text="${p.lat}"></td>
+              <td th:text="${p.lon}"></td>
+              <td th:text="${p.display_name}"></td>
+              <td th:text="${p.type}"></td>
             </tr>
           </tbody>
-        </table>-->
+        </table>
 	
         <div th:replace="bootstrap/bootstrap_footer.html"></div>
     </div>
