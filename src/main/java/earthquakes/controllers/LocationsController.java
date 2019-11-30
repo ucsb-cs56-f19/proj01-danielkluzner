@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.Map;
 import java.util.HashMap;
 import earthquakes.geojson.FeatureCollection;
-import earthquakes.services.EarthquakeQueryService;
+import earthquakes.services.LocationQueryService;
 import earthquakes.searches.LocSearch;
 
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
@@ -32,14 +32,14 @@ public class LocationsController {
     public String getLocationsResults(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken,
             LocSearch locSearch) {
 
-        //EarthquakeQueryService e =
-	//new EarthquakeQueryService();
+        LocationQueryService e =
+	    new LocationQueryService();
 
         model.addAttribute("locSearch", locSearch);
-        /*String json = e.getJSON(eqSearch.getDistance(), eqSearch.getMinmag());
+        String json = e.getJSON(locSearch.getLocation());
         model.addAttribute("json", json);
 	FeatureCollection featureCollection = FeatureCollection.fromJSON(json);
-        model.addAttribute("featureCollection",featureCollection);*/
+        model.addAttribute("featureCollection",featureCollection);
         return "locations/results";
     }
 }
