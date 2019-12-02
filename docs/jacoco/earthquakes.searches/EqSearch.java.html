@@ -4,27 +4,57 @@ public class EqSearch {
 
     private int distance;
     private int minmag;
+    private double lat;
+    private double lon;
+    private String location;
 
-<span class="fc" id="L8">    public EqSearch(){</span>
-<span class="fc" id="L9">	distance = 0;</span>
-<span class="fc" id="L10">	minmag = 0;</span>
-<span class="fc" id="L11">    }</span>
+<span class="fc" id="L11">    public EqSearch(){</span>
+<span class="fc" id="L12">	distance = 0;</span>
+<span class="fc" id="L13">	minmag = 0;</span>
+<span class="fc" id="L14">	lat = 0.0;</span>
+<span class="fc" id="L15">	lon = 0.0;</span>
+<span class="fc" id="L16">	location = &quot;&quot;;</span>
+<span class="fc" id="L17">    }</span>
 
     public int getDistance(){
-<span class="fc" id="L14">	return distance;</span>
+<span class="fc" id="L20">	return distance;</span>
     }
 
     public int getMinmag(){
-<span class="fc" id="L18">	return minmag;</span>
+<span class="fc" id="L24">	return minmag;</span>
     }
 
+    public double getLat(){
+<span class="fc" id="L28">        return lat;</span>
+    }
+
+    public double getLon(){
+<span class="fc" id="L32">        return lon;</span>
+    }
+
+    public String getLocation(){
+<span class="fc" id="L36">	return location;</span>
+    }
+    
     public void setDistance(int distance){
-<span class="nc" id="L22">	this.distance = distance;</span>
-<span class="nc" id="L23">    }</span>
+<span class="nc" id="L40">	this.distance = distance;</span>
+<span class="nc" id="L41">    }</span>
 
     public void setMinmag(int minmag){
-<span class="nc" id="L26">	this.minmag = minmag;</span>
-<span class="nc" id="L27">    }</span>
+<span class="nc" id="L44">	this.minmag = minmag;</span>
+<span class="nc" id="L45">    }</span>
+
+    public void setLat(double lat){
+<span class="nc" id="L48">	this.lat = lat;</span>
+<span class="nc" id="L49">    }</span>
+
+    public void setLon(double lon){
+<span class="nc" id="L52">	this.lon = lon;</span>
+<span class="nc" id="L53">    }</span>
+
+    public void setLocation(String location){
+<span class="nc" id="L56">	this.location = location;</span>
+<span class="nc" id="L57">    }</span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
