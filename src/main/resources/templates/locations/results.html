@@ -17,13 +17,11 @@
         <table class = "table">
           <thead>
             <tr>
-	      <!--<th>Title</th>-->
 	      <th>Location</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-	      <!--<td><a th:href="${featureCollection.metadata.url}" th:text="${featureCollection.metadata.title}"></a></td>-->
 	      <td th:text="${locSearch.location}"></td>
             </tr>
           </tbody>
@@ -33,6 +31,7 @@
         <table class = "table">
           <thead>
             <tr>
+	      <th>Get Earthquakes</th>
               <th>Place ID</th>
               <th>Latitude</th>
               <th>Longitude</th>
@@ -42,6 +41,7 @@
           </thead>
           <tbody>
             <tr th:each="p: ${places}">
+	      <td><a th:href="@{/earthquakes/search/(lat=${p.lat},lon=${p.lon},location=${p.display_name})}">Get Earthquakes</a></td>
 	      <td th:text="${p.place_id}"></td>
 	      <td th:text="${p.lat}"></td>
               <td th:text="${p.lon}"></td>
