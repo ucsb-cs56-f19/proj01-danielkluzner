@@ -18,7 +18,8 @@
 		<th>Place ID</th>
 		<th>Name</th>
 		<th>Latitude</th>
-		<th>Longitude</th>
+	      <th>Longitude</th>
+	      <th>Delete</th>
               </tr>
           </thead>
           <tbody>
@@ -28,7 +29,8 @@
                 <td th:text="${l.getPlaceid()}"></td>
                 <td th:text="${l.getName()}"></td>
 		<td th:text="${l.getLatitude()}"></td>
-		<td th:text="${l.getLongitude()}"></td>
+	      <td th:text="${l.getLongitude()}"></td>
+	      <td>Delete</td>
               </tr>
           </tbody>
       </table>
