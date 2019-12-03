@@ -14,21 +14,21 @@ public class Location {
 
     private long placeId;
     private String name;
-    private double lat;
-    private double lon;
+    private double latitude;
+    private double longitude;
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
-    public long getPlaceid() { return placeId; }
-    public void setPlaceid(long placeId) { this.placeId = placeId; }
+    public Long getPlaceid() { return placeId; }
+    public void setPlaceid(Long placeId) { this.placeId = placeId; }
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
 
-    public double getLat() { return lat; }
-    public void setLat(double lat) { this.lat = lat; }
+    public double getLatitude() { return latitude; }
+    public void setLatitude(double latitutde) { this.latitude = latitude; }
 
-    public double getLon() { return lon; }
-    public void setLon(double lon) { this.lon = lon; }
+    public double getLongitude() { return longitude; }
+    public void setLongitude(double longitude) { this.longitude = longitude; }
 }
