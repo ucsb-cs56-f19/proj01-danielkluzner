@@ -30,7 +30,11 @@
                 <td th:text="${l.getName()}"></td>
 		<td th:text="${l.getLatitude()}"></td>
 	      <td th:text="${l.getLongitude()}"></td>
-	      <td>Delete</td>
+	      <td>
+		<form th:method="delete" th:action="@{/locations/delete/} + ${l.getId()}">
+		  <input type="submit" class="btn btn-danger" value="Delete" />
+		</form>
+	      </td>
               </tr>
           </tbody>
       </table>
