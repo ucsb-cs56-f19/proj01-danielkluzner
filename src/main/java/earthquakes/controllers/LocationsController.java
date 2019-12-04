@@ -60,7 +60,7 @@ public class LocationsController {
     public String add(Location location, Model model) {
       locationRepository.save(location);
       model.addAttribute("locations", locationRepository.findAll());
-      return "/locations/index";
+      return "locations/index";
     }
 
     @DeleteMapping("/locations/delete/{id}")
@@ -69,6 +69,6 @@ public class LocationsController {
             .orElseThrow(() -> new IllegalArgumentException("Invalid courseoffering Id:" + id));
 	locationRepository.delete(location);
 	model.addAttribute("locations", locationRepository.findAll());
-	return "/locations/index";
+	return "locations/index";
     }
 }
