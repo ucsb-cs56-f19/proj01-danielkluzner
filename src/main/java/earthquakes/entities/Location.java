@@ -20,8 +20,8 @@ public class Location {
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
-    public Long getPlaceid() { return placeId; }
-    public void setPlaceid(Long placeId) { this.placeId = placeId; }
+    public long getPlaceid() { return placeId; }
+    public void setPlaceid(long placeId) { this.placeId = placeId; }
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
