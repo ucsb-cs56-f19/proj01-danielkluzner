@@ -28,10 +28,14 @@ import earthquakes.repositories.LocationRepository;
 import earthquakes.entities.Location;
 
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Controller
 public class LocationsController {
 
+    private Logger logger = LoggerFactory.getLogger(LocationsController.class);
+    
     @Autowired
     private LocationRepository locationRepository;
 
@@ -65,7 +69,8 @@ public class LocationsController {
 
     @PostMapping("/locations/add")
     public String add(Location location, Model model) {
-      locationRepository.save(location);
+	logger.info("location=" + location);
+	locationRepository.save(location);
       model.addAttribute("locations", locationRepository.findAll());
       return "locations/index";
     }
