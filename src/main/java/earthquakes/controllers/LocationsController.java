@@ -64,7 +64,7 @@ public class LocationsController {
     }
 
     @PostMapping("/locations/add")
-    public String add(Location location, Model model) {
+    public String add(@Valid Location location, @Valid Model model) {
       locationRepository.save(location);
       model.addAttribute("locations", locationRepository.findAll());
       return "locations/index";
