@@ -26,7 +26,7 @@
             <tr th:each="l: ${locations}">
 	      <td><a th:href="@{/earthquakes/search/(lat=${l.getLatitude()},lon=${l.getLongitude()},location=${l.getName()})}">Get Earthquakes</a></td>
               <td th:text="${l.getId()}"></td>
-              <td th:text="${l.getPlaceid()}"></td>
+              <td th:text="${l.getPlaceId()}"></td>
               <td th:text="${l.getName()}"></td>
 	      <td th:text="${l.getLatitude()}"></td>
 	      <td th:text="${l.getLongitude()}"></td>
