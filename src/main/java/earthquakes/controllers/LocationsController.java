@@ -9,13 +9,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-//
+/*
 import org.springframework.http.ResponseEntity;
 import static org.springframework.http.ResponseEntity.ok;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
-//
+*/
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import java.util.Map;
@@ -28,10 +28,14 @@ import earthquakes.repositories.LocationRepository;
 import earthquakes.entities.Location;
 
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Controller
 public class LocationsController {
 
+    private Logger logger = LoggerFactory.getLogger(LocationsController.class);
+    
     @Autowired
     private LocationRepository locationRepository;
 
@@ -65,7 +69,8 @@ public class LocationsController {
 
     @PostMapping("/locations/add")
     public String add(Location location, Model model) {
-      locationRepository.save(location);
+	logger.info("location=" + location);
+	locationRepository.save(location);
       model.addAttribute("locations", locationRepository.findAll());
       return "locations/index";
     }

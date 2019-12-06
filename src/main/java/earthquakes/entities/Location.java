@@ -20,8 +20,8 @@ public class Location {
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
-    public Long getPlaceid() { return placeId; }
-    public void setPlaceid(Long placeId) { this.placeId = placeId; }
+    public long getPlaceId() { return placeId; }
+    public void setPlaceId(long placeId) { this.placeId = placeId; }
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
@@ -31,4 +31,8 @@ public class Location {
 
     public double getLongitude() { return longitude; }
     public void setLongitude(double longitude) { this.longitude = longitude; }
+
+    public String toString(){
+	return ("[id=" + id + ", placeId=" + placeId + ", name=" + name + ", latitude=" + latitude + ", longitude=" + longitude + "]\n");
+    }
 }
