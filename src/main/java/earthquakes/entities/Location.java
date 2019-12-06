@@ -17,14 +17,6 @@ public class Location {
     private double latitude;
     private double longitude;
 
-    public Location(){
-	id = 0;
-	placeId = 0;
-	name = "";
-	latitude = 0.0;
-	longitude = 0.0;
-    }
-
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
